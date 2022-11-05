@@ -3,7 +3,7 @@ function Videos({ data }) {
     <a
       href={`https://www.youtube.com/watch?v=${link}`}
       target='_blank'
-      rel='noopener'
+      rel='noreferrer'
     >
       <div className='rounded-lg shadow-lg pt-4 pb-8 px-4 space-y-6 bg-zinc-100 border border-zinc-200'>
         <img src={image} className='rounded-lg w-full h-auto ' alt='' />
@@ -24,6 +24,7 @@ function Videos({ data }) {
       <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  container mx-auto max-w-6xl gap-4'>
         {data.items.map((props) => (
           <VideoItem
+            key={props.id.videoId}
             title={props.snippet.title}
             image={props.snippet.thumbnails.medium.url}
             link={props.id.videoId}

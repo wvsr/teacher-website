@@ -9,7 +9,7 @@ function Header() {
           <a
             href='https://www.youtube.com/channel/UC89PsEw-lR-76Q27ZyY-msQ'
             target='_blank'
-            rel='noopener'
+            rel='noreferrer'
           >
             Subscribe
           </a>
