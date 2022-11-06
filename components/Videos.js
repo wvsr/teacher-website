@@ -15,7 +15,7 @@ function Videos({ data }) {
   )
 
   return (
-    <div className='py-14 bg-slate-50'>
+    <div className='py-14 bg-slate-50 px-3'>
       <div className='flex justify-center text-center my-8 container mx-auto px-4'>
         <h1 class='sm:text-4xl text-2xl title-font mb-4 text-gray-900 max-w-xl font-semibold'>
           Recent Youtube Videos
