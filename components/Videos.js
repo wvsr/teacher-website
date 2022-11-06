@@ -15,10 +15,10 @@ function Videos({ data }) {
   )
 
   return (
-    <div className='py-14'>
-      <div className='flex justify-center text-center my-8'>
+    <div className='py-14 bg-slate-50'>
+      <div className='flex justify-center text-center my-8 container mx-auto px-4'>
         <h1 class='sm:text-4xl text-2xl title-font mb-4 text-gray-900 max-w-xl font-semibold'>
-          Most Loved Bangladeshi Teacher On The Internet
+          Recent Youtube Videos
         </h1>
       </div>
       <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  container mx-auto max-w-6xl gap-4'>

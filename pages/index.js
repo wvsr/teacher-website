@@ -52,6 +52,7 @@ export async function getStaticProps(ctx) {
     props: {
       data: [resDetails, resVideos],
     },
+    revalidate: 60 * 30,
   }
 }
 
