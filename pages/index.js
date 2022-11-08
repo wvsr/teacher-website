@@ -46,7 +46,7 @@ export async function getStaticProps() {
   const resDetails = await reqDetails.json()
 
   const reqVideos = await fetch(
-    `https://youtube-v31.p.rapidapi.com/search?channelId=${channelId}&part=snippet%2Cid&order=date&maxResults=50&timeblank=${minute_}`,
+    `https://youtube-v31.p.rapidapi.com/search?channelId=${channelId}&part=snippet%2Cid&order=date&maxResults=15&timeblank=${minute_}`,
     options
   )
   const resVideos = await reqVideos.json()
