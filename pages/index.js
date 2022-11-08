@@ -7,6 +7,7 @@ import Videos from '../components/Videos'
 import Head from 'next/head'
 
 function index(props) {
+  console.log(props.data)
   return (
     <>
       <Head>
@@ -44,10 +45,12 @@ export async function getStaticProps() {
   const resDetails = await reqDetails.json()
 
   const reqVideos = await fetch(
-    `https://youtube-v31.p.rapidapi.com/search?channelId=${channelId}&part=snippet%2Cid&order=date&maxResults=10`,
+    `https://youtube-v31.p.rapidapi.com/search?channelId=${channelId}&part=snippet%2Cid&order=date&maxResults=50`,
     options
   )
   const resVideos = await reqVideos.json()
+  console.log(resVideos, resDetails)
+
   return {
     props: {
       data: [resDetails, resVideos],
