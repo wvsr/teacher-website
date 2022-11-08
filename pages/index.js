@@ -27,7 +27,7 @@ function index(props) {
   )
 }
 
-export async function getStaticProps(ctx) {
+export async function getStaticProps() {
   const channelId = 'UC89PsEw-lR-76Q27ZyY-msQ'
   const options = {
     method: 'GET',
