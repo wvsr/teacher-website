@@ -30,6 +30,7 @@ function index(props) {
 
 export async function getStaticProps() {
   const channelId = 'UC89PsEw-lR-76Q27ZyY-msQ'
+  const minute_ = new Date().getMinutes()
   const options = {
     method: 'GET',
     headers: {
@@ -39,13 +40,13 @@ export async function getStaticProps() {
   }
 
   const reqDetails = await fetch(
-    `https://youtube-v31.p.rapidapi.com/channels?part=snippet%2Cstatistics&id=${channelId}`,
+    `https://youtube-v31.p.rapidapi.com/channels?part=snippet%2Cstatistics&id=${channelId}&timeblank=${minute_}`,
     options
   )
   const resDetails = await reqDetails.json()
 
   const reqVideos = await fetch(
-    `https://youtube-v31.p.rapidapi.com/search?channelId=${channelId}&part=snippet%2Cid&order=date&maxResults=50`,
+    `https://youtube-v31.p.rapidapi.com/search?channelId=${channelId}&part=snippet%2Cid&order=date&maxResults=50&timeblank=${minute_}`,
     options
   )
   const resVideos = await reqVideos.json()
