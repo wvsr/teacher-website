@@ -20,7 +20,7 @@ function index(props) {
       </Head>
       <Header />
       <Hero />
-<p className='text-9xl'>{props.data[2]}<p>
+<p className='text-9xl'>{props.data[2]}</p>
       <Showcase {...props.data[0].items[0].statistics} />
       <News />
       <Videos data={props.data[1]} />
