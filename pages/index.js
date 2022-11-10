@@ -7,7 +7,6 @@ import Videos from '../components/Videos'
 import Head from 'next/head'
 
 function index(props) {
-  console.log(props.data)
   return (
     <>
       <Head>
@@ -20,7 +19,6 @@ function index(props) {
       </Head>
       <Header />
       <Hero />
-<p className='text-9xl'>{props.data[2]}</p>
       <Showcase {...props.data[0].items[0].statistics} />
       <News />
       <Videos data={props.data[1]} />
